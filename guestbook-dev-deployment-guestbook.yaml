@@ -4,7 +4,7 @@ metadata:
   name: guestbook
   namespace: guestbook-dev
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -15,7 +15,7 @@ spec:
         app: guestbook
     spec:
       containers:
-      - image: ghcr.io/hiddeco/guestbook:v0.0.56
+      - image: ghcr.io/hiddeco/guestbook:v0.0.58
         name: guestbook
         ports:
         - containerPort: 3000
